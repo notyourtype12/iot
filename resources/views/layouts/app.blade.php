@@ -64,6 +64,13 @@
   <script src="{{ asset('assets/modules/moment.min.js') }}"></script>
   <script src="{{ asset('assets/js/stisla.js') }}"></script>
 
+  <script src="{{ asset('assets/modules/simple-weather/jquery.simpleWeather.min.js') }}"></script>
+  <script src="{{ asset('assets/modules/chart.min.js') }}"></script>
+  <script src="{{ asset('assets/modules/jqvmap/dist/jquery.vmap.min.js') }}"></script>
+  <script src="{{ asset('assets/modules/jqvmap/dist/maps/jquery.vmap.world.js') }}"></script>
+  <script src="{{ asset('assets/modules/summernote/summernote-bs4.js') }}"></script>
+  <script src="{{ asset('assets/modules/chocolat/dist/js/jquery.chocolat.min.js') }}"></script>
+
   {{-- JS Libraries (per halaman) --}}
   @stack('js-lib')
 
@@ -73,5 +80,18 @@
   {{-- Template JS --}}
   <script src="{{ asset('assets/js/scripts.js') }}"></script>
   <script src="{{ asset('assets/js/custom.js') }}"></script>
+  <style>
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+</style>
+
 </body>
 </html>

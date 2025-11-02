@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\HistoryController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -16,5 +17,11 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+Route::get('/history', [HistoryController::class, 'index'])->name('history.index');
+Route::get('/history/{id_history}/delete', [HistoryController::class, 'destroy'])->name('history.destroy');
+
+Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
+
 
 require __DIR__.'/auth.php';
